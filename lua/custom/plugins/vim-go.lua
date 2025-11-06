@@ -8,8 +8,8 @@ return {
     vim.api.nvim_create_autocmd('FileType', {
       pattern = 'go',
       callback = function()
-        vim.keymap.set('n', '<leader>gs', '<Plug>(go-def-split)', { buffer = 0, silent = true })
-        vim.keymap.set('n', '<leader>gv', '<Plug>(go-def-vertical)', { buffer = 0, silent = true })
+        vim.keymap.set('n', '<leader>gs', '<Plug>(go-def-split)', { buffer = 0, silent = true, desc = '[G]o to definition in a [s]plit' })
+        vim.keymap.set('n', '<leader>gv', '<Plug>(go-def-vertical)', { buffer = 0, silent = true, desc = '[G]o to definition in a [v]ertical split' })
       end,
     })
   end,
