@@ -202,6 +202,14 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Opt+arrow for word movement in insert mode
+vim.keymap.set('i', '<Esc>b', '<C-o>b', { noremap = true, silent = true, desc = 'Move back one word' })
+vim.keymap.set('i', '<Esc>f', '<C-o>w', { noremap = true, silent = true, desc = 'Move back one word' })
+
+-- Cmd+arrow for line movement in insert mode
+vim.keymap.set('i', '<Esc>[H', '<C-o>^', { noremap = true, silent = true, desc = 'Move to start of line' })
+vim.keymap.set('i', '<Esc>[F', '<C-o>$', { noremap = true, silent = true, desc = 'Move to end of line' })
+
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
